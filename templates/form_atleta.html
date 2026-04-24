@@ -1,10 +1,19 @@
 {% extends "base.html" %}
+
 {% block content %}
-<h1>{{ 'Editar' if atleta else 'Novo' }} Atleta</h1>
+<h2>{{ 'Editar Atleta' if atleta else 'Novo Atleta' }}</h2>
+
 <form method="POST">
-    <input type="text" name="nome" placeholder="Nome" value="{{ atleta.nome if atleta else '' }}" required>
-    <input type="number" name="idade" placeholder="Idade" value="{{ atleta.idade if atleta else '' }}" required>
-    <input type="text" name="esporte" placeholder="Esporte" value="{{ atleta.esporte if atleta else '' }}" required>
+    <label>Nome:</label>
+    <input type="text" name="nome" value="{{ atleta.nome if atleta else '' }}" required>
+    
+    <label>Idade:</label>
+    <input type="number" name="idade" value="{{ atleta.idade if atleta else '' }}" required>
+    
+    <label>Esporte:</label>
+    <input type="text" name="esporte" value="{{ atleta.esporte if atleta else '' }}" required>
+    
     <button type="submit">Salvar</button>
+    <a href="/atletas" class="cancelar">Cancelar</a>
 </form>
 {% endblock %}

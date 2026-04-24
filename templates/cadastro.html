@@ -1,17 +1,11 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
 {% block content %}
-
-<div class="form-container">
-    <h2>Criar conta</h2>
-
-    <p>Cadastre-se para começar.</p>
-
-    <form method="POST">
-        <input type="text" name="user" placeholder="Usuário">
-        <input type="password" name="senha" placeholder="Senha">
-        <button type="submit">Cadastrar</button>
-    </form>
-</div>
-
+<h2>Cadastro de Usuário</h2>
+<form method="POST">
+    <input type="text" name="nome" placeholder="Usuário" required>
+    <input type="password" name="senha" placeholder="Senha" required>
+    <button type="submit">Cadastrar</button>
+</form>
+<p>Já tem cadastro? <a href="/login">Faça login</a></p>
 {% endblock %}

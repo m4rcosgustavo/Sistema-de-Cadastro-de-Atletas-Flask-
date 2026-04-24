@@ -1,103 +1,234 @@
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-    body {
-        background: linear-gradient(135deg, #0f172a, #1e293b);
-        color: white;
-        min-height: 100vh;
-    }
+/* BODY */
+body {
+    background: #0f172a;
+    color: #e2e8f0;
+}
 
-    /* NAVBAR */
-    nav {
-        background: #020617;
-        padding: 15px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.4);
-    }
+/* NAVBAR */
+nav {
+    background: #020617;
+    padding: 18px 40px;
+    display: flex;
+    justify-content: space-between;
+}
 
-    nav a {
-        color: #38bdf8;
-        text-decoration: none;
-        margin-right: 15px;
-        font-weight: bold;
-        transition: 0.3s;
-    }
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    margin-right: 15px;
+}
 
-    nav a:hover {
-        color: #7dd3fc;
-    }
+nav a:hover {
+    color: #38bdf8;
+}
 
-    /* MAIN CENTRALIZADO */
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: calc(100vh - 70px);
-        padding: 20px;
-    }
+/* CONTAINER PADRÃO (HOME / DASHBOARD) */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
 
-    /* CARD */
-    .card {
-        background: #020617;
-        padding: 30px;
-        border-radius: 15px;
-        width: 100%;
-        max-width: 400px;
-        box-shadow: 0 0 25px rgba(56, 189, 248, 0.2);
-        text-align: center;
-    }
+/* HERO */
+.hero {
+    text-align: center;
+    margin-bottom: 40px;
+}
 
-    h1, h2 {
-        margin-bottom: 20px;
-    }
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
 
-    /* INPUTS */
-    input {
-        width: 100%;
-        padding: 12px;
-        margin: 10px 0;
-        border-radius: 10px;
-        border: none;
-        outline: none;
-    }
+.hero p {
+    margin-bottom: 20px;
+}
 
-    /* BOTÃO */
-    button {
-        width: 100%;
-        padding: 12px;
-        border-radius: 10px;
-        border: none;
-        background: #38bdf8;
-        color: black;
-        font-weight: bold;
-        cursor: pointer;
-        transition: 0.3s;
-    }
+/* BOTÕES */
+.btn {
+    display: inline-block;
+    background: #38bdf8;
+    color: black;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
 
-    button:hover {
-        background: #0ea5e9;
-    }
+.btn:hover {
+    background: #0ea5e9;
+}
 
-    /* LISTA */
-    ul {
-        list-style: none;
-        margin-top: 20px;
-    }
+.btn-green {
+    background: #22c55e;
+    color: white;
+}
 
-    li {
-        background: #1e293b;
-        padding: 10px;
-        margin: 8px 0;
-        border-radius: 8px;
-    }
+.btn-green:hover {
+    background: #16a34a;
+}
 
-    li a {
-        margin-left: 10px;
-        font-size: 14px;
-    }
+/* IMAGEM */
+.banner {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 30px;
+}
+
+/* SEÇÕES */
+.section {
+    background: #020617;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+/* LISTAS (HOME) */
+.lista p {
+    margin: 8px 0;
+}
+
+/* DASHBOARD */
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+li {
+    background: #020617;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.acoes a {
+    margin-left: 10px;
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+.acoes a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------- FORMULÁRIOS (LOGIN/CADASTRO) ---------------- */
+
+/* só aplica quando usar essa classe */
+.form-container {
+    max-width: 400px;
+    margin: 80px auto;
+    background: #020617;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #1e293b;
+    text-align: center;
+}
+
+/* NÃO afeta o resto do site */
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-container input {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    background: #0f172a;
+    color: white;
+}
+
+.form-container input:focus {
+    outline: none;
+    border-color: #38bdf8;
+}
+
+.form-container button {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: #38bdf8;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.form-container button:hover {
+    background: #0ea5e9;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    color: #94a3b8;
+}
+/* DASHBOARD */
+
+.titulo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* topo com filtro + botão */
+.topo-dashboard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* input do filtro */
+.topo-dashboard input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    background: #0f172a;
+    color: white;
+}
+
+/* lista */
+.lista-tarefas {
+    list-style: none;
+}
+
+/* item */
+.item-tarefa {
+    background: #020617;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #1e293b;
+}
+
+/* ações */
+.acoes a {
+    margin-left: 10px;
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.acoes a:hover {
+    text-decoration: underline;
+}

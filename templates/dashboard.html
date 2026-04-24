@@ -1,22 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>Tarefas</h2>
 
-<form method="GET">
-    <input type="text" name="filtro" placeholder="Buscar tarefa">
-    <button type="submit">Filtrar</button>
-</form>
+<h2 class="titulo">Minhas Tarefas</h2>
 
-<a href="/criar">Nova Tarefa</a>
+<div class="topo-dashboard">
+    <form method="GET">
+        <input type="text" name="filtro" placeholder="Buscar tarefa">
+    </form>
 
-<ul>
+    <a href="/criar" class="btn">+ Nova</a>
+</div>
+
+<ul class="lista-tarefas">
     {% for t in tarefas %}
-        <li>
-            {{ t.titulo }}
+    <li class="item-tarefa">
+        <span>{{ t.titulo }}</span>
+
+        <div class="acoes">
             <a href="/editar/{{ t.id }}">Editar</a>
             <a href="/deletar/{{ t.id }}">Excluir</a>
-        </li>
+        </div>
+    </li>
     {% endfor %}
 </ul>
 
